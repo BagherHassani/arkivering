@@ -1,0 +1,52 @@
+RUNRIKET – ARKIVERAD KOPIA
+===========================
+
+Detta är en komplett offline-kopia av Runriket-delen av vallentuna.se
+(https://www.vallentuna.se/runriket/), hämtad 2026-09-15.
+
+Innehåll: alla sidor under /runriket/, CSS, JavaScript, bilder, teckensnitt,
+PDF (lärarhandledning) samt ljudguider (mp3) för platserna.
+
+
+ÖPPNA OFFLINE (på din egen dator)
+---------------------------------
+Dubbelklicka på "index.html" i denna mapp. Den skickar dig automatiskt
+vidare till Runrikets startsida. Bläddra sedan som vanligt – allt är lokalt.
+
+
+LÄGGA UPP PÅ EN ANNAN DOMÄN / SERVER
+------------------------------------
+Hela denna mapp (runriket-arkiv) är webbroten. Alla länkar är relativa,
+så du behöver INTE ändra något.
+
+1. Kopiera HELA innehållet i mappen "runriket-arkiv" till serverns webbrot
+   (t.ex. public_html / wwwroot / htdocs).
+2. Klart. Besök din domän:
+      https://din-domän.se/            -> visar Runriket (via index.html)
+      https://din-domän.se/www.vallentuna.se/runriket/  -> direkt till startsidan
+
+Fungerar på vilken vanlig statisk webbserver som helst (Apache, Nginx, IIS,
+GitHub Pages, Netlify, Azure Static Web Apps m.fl.) – inga databaser eller
+serverskript krävs.
+
+
+MAPPSTRUKTUR
+------------
+index.html                       <- start/omdirigering (roten)
+www.vallentuna.se/runriket/...   <- alla Runriket-sidor
+www.vallentuna.se/static/...     <- CSS och JavaScript
+www.vallentuna.se/imagevault/... <- bilder
+dok.vallentuna.se/file/runriket/ <- PDF och ljudguider (mp3)
+customer.cludo.com/...           <- stilar/skript för sökrutan
+stats.vallentuna.se/...          <- statistik-stilar
+
+
+ATT KÄNNA TILL
+--------------
+- Sökrutan (Cludo) kan inte ge sökträffar offline eftersom den kräver
+  en live-tjänst hos leverantören. Själva sidorna och allt innehåll fungerar.
+- Navigeringslänkar till ÖVRIGA delar av vallentuna.se och taby.se (utanför
+  Runriket) pekar fortfarande på de riktiga webbplatserna – det var det som
+  skulle arkiveras: enbart Runriket.
+- "og:url"-metataggar pekar fortfarande på originaladressen. Det är endast
+  metadata för social delning och påverkar inte funktionen.

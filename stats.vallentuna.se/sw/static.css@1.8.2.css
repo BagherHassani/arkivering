@@ -1,0 +1,55 @@
+/* Paloma: anmÃ¤lningsformlÃ¤r, HTML-kod pÃ¥ enskilda sidor */
+.cpalomafield {
+	border:1px solid #1a6f51 !important;
+}
+.cpalomafield:focus {
+	background-color:#d2e2c3;
+}
+
+
+
+/* SjÃ¤lvservicesidan: Bild "HjÃ¤lp" */
+#cservicehelp {
+	margin-top: 70px;
+	transform: rotate(3deg);
+	text-align: center;
+}
+#cservicehelp a {
+	display:inline-block; 
+	width:300px; 
+	height:224px;
+	background-image: url('../../www.vallentuna.se/imagevault/publishedmedia/szgntqw97l1kymc8r5hd/chatbot-gfd9b8aa38_1280.png');
+	color: #000;
+}
+#cservicehelp a span {
+	margin-left: 90px;
+	padding-top: 70px;
+	display: block;
+}
+
+
+/* Paloma webbformulär anmälan */
+#SubscriberForm_email, #SubscriberForm_firstname, #SubscriberForm_surname {
+	border:1px solid #000;
+	padding:5px 8px 5px 8px;
+}
+#SubscriberForm_email_error_required, #SubscriberForm_email_error_0, #SubscriberForm_email_error_1, #SubscriberForm_firstname_error_0, #SubscriberForm_surname_error_0 {
+	display:none;color:red;
+}
+#palomaform label {
+	font-size:1em;
+}
+#SubscriberForm_SubmitButton {
+	font-size:1em;	
+}
+
+
+/* TEMP: SÃ¶kfÃ¤ltet i sidhuvudet */
+.header__search input {
+	border-color:#111 !important;
+}
+
+/* Iframe */
+iframe {
+	border:none;
+}
