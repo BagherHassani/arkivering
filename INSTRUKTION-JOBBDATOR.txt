@@ -1,0 +1,75 @@
+====================================================================
+ RUNRIKET OFFLINE - INSTRUKTION FOR JOBBDATOR (utan installation)
+====================================================================
+
+Du behover INTE installera nagot. Allt anvander det som redan finns
+inbyggt i Windows (PowerShell / .NET) och en vanlig webblasare.
+
+
+-----------------------------------------------------
+STEG 1 - Ladda ner arkivet fran GitHub (bara webblasare)
+-----------------------------------------------------
+1. Ga till repot i webblasaren:
+      https://github.com/BagherHassani/arkivering
+
+2. Klicka pa den grona knappen "<> Code".
+
+3. Valj "Download ZIP".
+   (Da laddas hela arkivet ner som en enda zip-fil - inga verktyg behovs.)
+
+4. Zip-filen hamnar i din Nedladdningar-mapp, t.ex.:
+      arkivering-main.zip
+
+
+-----------------------------------------------------
+STEG 2 - Packa upp
+-----------------------------------------------------
+1. Hogerklicka pa zip-filen -> "Extrahera alla..." -> "Extrahera".
+   (VIKTIGT: bara att dubbelklicka pa zip-filen racker INTE - den maste
+    packas upp forst, annars fungerar inte lankarna.)
+
+2. Nu far du en mapp, t.ex. "arkivering-main". Oppna den.
+   Inuti ska det ligga bl.a.:
+      index.html
+      STARTA-RUNRIKET.bat
+      starta-server.ps1
+      static\  imagevault\  runrikets-platser\  (m.fl. mappar)
+
+
+-----------------------------------------------------
+STEG 3 - Starta lokalt (valj ETT av alternativen)
+-----------------------------------------------------
+
+ALTERNATIV A - Enklast (dubbelklick):
+   Dubbelklicka pa "STARTA-RUNRIKET.bat".
+   -> Ett fonster oppnas och webblasaren startar automatiskt pa
+      http://localhost:8000/
+   -> Bladdra som vanligt. Stang fonstret for att stoppa.
+
+ALTERNATIV B - Via PowerShell (om .bat blockeras av IT-policy):
+   1. Oppna mappen i Utforskaren.
+   2. Hall in Shift + hogerklicka i mappen -> "Oppna PowerShell-fonster har".
+   3. Klistra in och kor:
+         powershell -ExecutionPolicy Bypass -File .\starta-server.ps1
+   -> Webblasaren oppnas pa http://localhost:8000/
+
+ALTERNATIV C - Utan server (om bada ovan blockeras):
+   Dubbelklicka helt enkelt pa "index.html".
+   Sidan oppnas direkt i webblasaren via fil-lage. Nastan allt fungerar;
+   en webbserver (A eller B) ger dock det mest korrekta resultatet.
+
+
+-----------------------------------------------------
+STOPPA SERVERN
+-----------------------------------------------------
+Tryck Ctrl + C i det svarta fonstret, eller stang fonstret.
+
+
+-----------------------------------------------------
+BRA ATT VETA
+-----------------------------------------------------
+- Sokrutan ger inga traffar offline (kraver en live-tjanst). Allt annat
+  innehall och all navigering inom Runriket fungerar.
+- Lankar till OVRIGA delar av vallentuna.se / taby.se (utanfor Runriket)
+  pekar fortfarande pa de riktiga webbplatserna.
+- Ingenting skrivs till internet och inget installeras pa datorn.

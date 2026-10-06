@@ -1,29 +1,29 @@
 RUNRIKET – ARKIVERAD KOPIA
 ===========================
 
-Detta är en komplett offline-kopia av Runriket-delen av vallentuna.se
-(https://www.vallentuna.se/runriket/), hämtad 2026-09-15.
+Detta är en egen webbplats för Runriket, avsedd för www.runriket.se.
+Innehållet kommer från vallentuna.se/runriket (hämtat 2026-09-15).
 
-Innehåll: alla sidor under /runriket/, CSS, JavaScript, bilder, teckensnitt,
+Innehåll: alla Runriket-sidor, CSS, JavaScript, bilder, teckensnitt,
 PDF (lärarhandledning) samt ljudguider (mp3) för platserna.
 
 
 ÖPPNA OFFLINE (på din egen dator)
 ---------------------------------
-Dubbelklicka på "index.html" i denna mapp. Den skickar dig automatiskt
-vidare till Runrikets startsida. Bläddra sedan som vanligt – allt är lokalt.
+Dubbelklicka på "STARTA-RUNRIKET.bat", eller på "index.html".
+index.html är själva startsidan.
 
 
-LÄGGA UPP PÅ EN ANNAN DOMÄN / SERVER
-------------------------------------
-Hela denna mapp (runriket-arkiv) är webbroten. Alla länkar är relativa,
-så du behöver INTE ändra något.
+LÄGGA UPP PÅ www.runriket.se
+----------------------------
+Hela denna mapp är webbroten. Alla interna länkar är relativa.
 
-1. Kopiera HELA innehållet i mappen "runriket-arkiv" till serverns webbrot
-   (t.ex. public_html / wwwroot / htdocs).
-2. Klart. Besök din domän:
-      https://din-domän.se/            -> visar Runriket (via index.html)
-      https://din-domän.se/www.vallentuna.se/runriket/  -> direkt till startsidan
+1. Kopiera HELA innehållet i mappen till serverns webbrot
+   (public_html / wwwroot / htdocs).
+2. Peka domänen www.runriket.se mot den mappen.
+3. Klart:
+      https://www.runriket.se/                         startsidan
+      https://www.runriket.se/runrikets-platser/       platserna
 
 Fungerar på vilken vanlig statisk webbserver som helst (Apache, Nginx, IIS,
 GitHub Pages, Netlify, Azure Static Web Apps m.fl.) – inga databaser eller
@@ -32,21 +32,32 @@ serverskript krävs.
 
 MAPPSTRUKTUR
 ------------
-index.html                       <- start/omdirigering (roten)
-www.vallentuna.se/runriket/...   <- alla Runriket-sidor
-www.vallentuna.se/static/...     <- CSS och JavaScript
-www.vallentuna.se/imagevault/... <- bilder
+index.html                 <- startsidan (www.runriket.se/)
+om-runriket/ ...            <- undersidor
+runrikets-platser/ ...
+static/                     <- CSS och JavaScript
+imagevault/                 <- bilder
 dok.vallentuna.se/file/runriket/ <- PDF och ljudguider (mp3)
-customer.cludo.com/...           <- stilar/skript för sökrutan
-stats.vallentuna.se/...          <- statistik-stilar
+customer.cludo.com/...      <- stilar/skript för sökrutan
+stats.vallentuna.se/...     <- statistik-stilar
+
+
+VAD SOM FORTFARANDE GÅR TILL VALLENTUNA.SE
+------------------------------------------
+- Sökningen (sökrutan skickar till https://www.vallentuna.se/sok/).
+- "Ändra inställningar för kakor" länkar till
+  https://www.vallentuna.se/om-webbplatsen/cookie-policy/
+- Tillgänglighet, Talande webb, översättning och personlig integritet
+  på sidan Om webbplatsen.
+- Länken "Vallentuna kommun" i sidfoten, och Täby kommun.
+- Enstaka ljudfiler som inte fanns med i kopian (engelska guider).
+
+En webbläsare kan inte läsa vallentuna.se:s kakor från www.runriket.se.
+Därför är kak-länken en vanlig länk till Vallentunas kak-sida, inte ett
+försök att dela kakan mellan domänerna.
 
 
 ATT KÄNNA TILL
 --------------
-- Sökrutan (Cludo) kan inte ge sökträffar offline eftersom den kräver
-  en live-tjänst hos leverantören. Själva sidorna och allt innehåll fungerar.
-- Navigeringslänkar till ÖVRIGA delar av vallentuna.se och taby.se (utanför
-  Runriket) pekar fortfarande på de riktiga webbplatserna – det var det som
-  skulle arkiveras: enbart Runriket.
-- "og:url"-metataggar pekar fortfarande på originaladressen. Det är endast
-  metadata för social delning och påverkar inte funktionen.
+- Sökrutan kan inte ge träffar offline. Själva sidorna fungerar lokalt.
+- Adresserna i koden (canonical och og:url) är https://www.runriket.se/...
